@@ -19,3 +19,35 @@ body {
   padding: 3rem;
   box-sizing: border-box;
 }
+
+.fill {
+  background-image: url('https://source.unsplash.com/random/150x150');
+  position: relative;
+  height: 15rem;
+  width: 15rem;
+  top: .25rem;
+  left: .25rem;
+  cursor: pointer;
+}
+
+.empty {
+  display: inline-block;
+  height: 16rem;
+  width: 16rem;
+  margin: 1rem;
+  border: 3px solid black;
+  background: white;
+}
+
+.hold {
+  border: solid #ccc 4px;
+}
+
+.hovered {
+  background: #f4f4f4;
+  border-style: dashed;
+}
+
+.invisible {
+  display: none;
+}
