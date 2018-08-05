@@ -1,11 +1,9 @@
 const fill = document.querySelector('.fill');
 const empties = document.querySelectorAll('.empty');
 
-// Fill Listeners
 fill.addEventListener('dragstart', dragStart);
 fill.addEventListener('dragend', dragEnd);
 
-// Loop through empties and call drag events
 for (const empty of empties) {
   empty.addEventListener('dragover', dragOver);
   empty.addEventListener('dragenter', dragEnter);
@@ -13,7 +11,6 @@ for (const empty of empties) {
   empty.addEventListener('drop', dragDrop);
 }
 
-// Drag Functions
 function dragStart(event) {
   event.dataTransfer.setData("text/plain", event.target.id);
   this.className += ' hold';
@@ -25,7 +22,7 @@ function dragEnd() {
 }
 
 function dragOver(event) {
-  event.preventDefault();   // Enables dragDrop() to fire
+  event.preventDefault();
 }
 
 function dragEnter(event) {
